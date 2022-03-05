@@ -9,6 +9,7 @@ const Home = () =>{
     return (<div>
         <div className="cafe">
         <h1>Welcome To Online Noodle Shop</h1>
+        <h1>TRY</h1>
         </div>
         <div className="Book1">
         <div align="center"><h1>Recommend</h1></div>
