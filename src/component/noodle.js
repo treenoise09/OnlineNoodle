@@ -4,7 +4,7 @@ import { Card, CardGroup, CardImg, CardBody, CardTitle, CardText } from 'reactst
 import './noodle.css';
 
 
-const noodle = () => {
+const Noodle = () => {
     return (
         <div>
             <style>
@@ -176,4 +176,4 @@ const noodle = () => {
     );
 }
 
-export default noodle;
+export default Noodle;

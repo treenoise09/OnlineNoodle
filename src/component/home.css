@@ -6,11 +6,11 @@
   }
   .cafe{
     padding: 75px;
-    background-image: url("../img/pexels.jpg"); 
+    background-color: #0E185F; 
     display: flex;
     justify-content: center;  
     align-items: center;
-    color:#363636;
+    color:#E8FFC2;
     flex-direction: column;
     border: 1px solid whitesmoke;
     font-style: normal;
@@ -30,9 +30,9 @@
     text-align: center;
     display: flex; 
     justify-content: center;  
-    color:#444fad;
+    color:#0E185F;
     padding: 16px;
-    background-color:#bcf4e4;
+    background-color:#2FA4FF;
     font-family: 'Courgette', cursive;
   }
   
