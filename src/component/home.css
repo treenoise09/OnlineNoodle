@@ -1,18 +1,17 @@
 .myCafe{
     padding: 64px;
-    background-color:#ecd4e4;
+    background-color:transparent;
     font-family: 'Courgette', cursive;
     color:#622d90;
   }
   .cafe{
     padding: 75px;
-    background-color: #0E185F; 
+    
     display: flex;
     justify-content: center;  
     align-items: center;
     color:#E8FFC2;
     flex-direction: column;
-    border: 1px solid whitesmoke;
     font-style: normal;
     font-size: xx-large;
     /* font-family: 'Lobster', cursive; */

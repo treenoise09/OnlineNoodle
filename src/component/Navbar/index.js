@@ -1,5 +1,9 @@
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+import Noodle from '../noodle';
+import Sweet from '../sweet';
+import Drink from '../drink';
+import Home from '../home';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
@@ -20,11 +24,9 @@ const Menu = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/Table">Reserve a table</Nav.Link>
-                        <NavDropdown title="Menu" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/noodle.js">Beverages</NavDropdown.Item>
-                            <NavDropdown.Item href="/Card2">Desserts</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link href="/Noodle">Noodle</Nav.Link>
+                        <Nav.Link href="/Drink">Drink</Nav.Link>
+                        <Nav.Link href="/Sweet">Sweet</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
