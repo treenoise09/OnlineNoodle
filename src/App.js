@@ -4,6 +4,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Noodle from './component/noodle.js'
 import Sweet from './component/sweet.js';
 import Drink from './component/drink.js';
+import DataTable from './Admin.js';
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/drink" element={<Drink/>}/> 
           <Route path="/noodle" element={<Noodle/>}/>
           <Route path="/" element={<Home/>}/>
+          <Route path="/Admin" element={<DataTable/>}/>
         </Routes>
       </div>
     </Router>
