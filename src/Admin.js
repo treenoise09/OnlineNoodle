@@ -115,7 +115,7 @@ Row.propTypes = {
   }).isRequired,
 };
 
-const rows = [//name,crab,protein,price
+const rows = [//name,Amount,Sum,price
   createData('Frozen yoghurt', 24, 4.0, 3.99),
   createData('Ice cream sandwich', 237, 37, 4.3, 4.99),
   createData('Eclair', 24, 6.0, 3.79),
