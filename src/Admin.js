@@ -13,12 +13,11 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-
-function createData(name, Amount, protein, price) {
+function createData(name, Amount, price) {
   return {
     name,
     Amount,
-    protein,
+    
     price,
     history: [
       {
@@ -34,8 +33,13 @@ function createData(name, Amount, protein, price) {
     ],
   };
 }
-function sum(){
-
+function sum(rows){
+  console.log(rows)
+  let i = 0;
+  rows.history.forEach(element => {
+    i  = i+(element.amount * rows.price);
+  });
+return i.toString();
 }
 
 function Row(props) {
@@ -58,7 +62,7 @@ function Row(props) {
           {row.name}
         </TableCell>
         <TableCell align="right">{row.Amount}</TableCell>
-        <TableCell align="right">{row.protein}</TableCell>
+        <TableCell align="right">{sum(row)}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -116,11 +120,11 @@ Row.propTypes = {
 };
 
 const rows = [//name,Amount,Sum,price
-  createData('Frozen yoghurt', 24, 4.0, 3.99),
-  createData('Ice cream sandwich', 237, 37, 4.3, 4.99),
-  createData('Eclair', 24, 6.0, 3.79),
-  createData('Cupcake', 67, 4.3, 2.5),
-  createData('Gingerbread', 49, 3.9, 1.5),
+  createData('Frozen yoghurt', 24, 3.99),
+  createData('Ice cream sandwich', 4.3, 4.99),
+  createData('Eclair', 24, 3.79),
+  createData('Cupcake', 67, 2.5),
+  createData('Gingerbread', 49, 1.5),
 ];
 
 export default function CollapsibleTable() {
