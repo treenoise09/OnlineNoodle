@@ -33,6 +33,14 @@ function createData(name, Amount, price) {
     ],
   };
 }
+function NA(rows) {
+  let j = 0;
+  rows.history.forEach(element => {
+    j = j+(element.amount)
+  })
+  return j.toString();
+  
+}
 function sum(rows){
   console.log(rows)
   let i = 0;
@@ -61,7 +69,7 @@ function Row(props) {
         <TableCell component="th" scope="row">
           {row.name}
         </TableCell>
-        <TableCell align="right">{row.Amount}</TableCell>
+        <TableCell align="right">{NA(row)}</TableCell>
         <TableCell align="right">{sum(row)}</TableCell>
       </TableRow>
       <TableRow>

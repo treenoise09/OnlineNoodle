@@ -5,6 +5,12 @@ import Noodle from './component/noodle.js'
 import Sweet from './component/sweet.js';
 import Drink from './component/drink.js';
 import DataTable from './Admin.js';
+import Logi from './component/Li.js';
+import CusLogi from './component/Login/CusLogin.js';
+import AdLogi from './component/Login/AdLogin.js';
+import Dashboard from './component/Dashboard/Dashboard.js';
+import Login from './component/Login/Login.js';
+import Preferences from './component/Preferences/Preferences.js';
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,7 +30,10 @@ class App extends Component {
           <Route path="/drink" element={<Drink/>}/> 
           <Route path="/noodle" element={<Noodle/>}/>
           <Route path="/" element={<Home/>}/>
+          <Route path="/CusLogin" element={<CusLogi/>}/>
+          <Route path="/AdLogin" element={<AdLogi/>}/>
           <Route path="/Admin" element={<DataTable/>}/>
+          <Route path='/Li' element={<Logi/>}/>
         </Routes>
       </div>
     </Router>
