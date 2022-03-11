@@ -2,6 +2,7 @@ import React from 'react';
 import { Button,TextField,Box } from '@mui/material';
 import { Card, CardGroup, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import './Reg/Reg.css';
 import { margin } from '@mui/system';
 
 const Logi= () =>{
@@ -23,7 +24,8 @@ const Logi= () =>{
                 type="password"
                 autoComplete="current-password"
             /></div>
-                  <Link to="/CusLogin"><div ALIGN="center"><Button variant="outline">For Customer</Button></div></Link>//ต้องซาโยนาระหน้านี้ไปเลยหลังจากล็อคอินแล้ว
+            <Link to={'/Reg'}><div ALIGN="center"><Button className='btn'>Register</Button></div></Link>
+                  <Link to="/CusLogin"><div ALIGN="center"><Button variant="outline">For Customer</Button></div></Link>
                     <Link to="/Admin"><div ALIGN="center"><Button variant="outline">For Admin</Button></div></Link>
         </CardBody>
     </Card>

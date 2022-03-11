@@ -12,10 +12,7 @@ const Drink = () => {
             </style>
             <div className="myStyleBev">
                 <br />
-            <h1>Welcome to Rendezvous Cafe</h1>
-            <br />
-            <h2>Beverage and Dessert</h2>
-                <br />
+            <h1>เครื่องดื่ม</h1>
             </div>
             
         <div>
