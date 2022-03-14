@@ -9,7 +9,6 @@ import Logi from './component/Li.js';
 import CusLogi from './component/Login/CusLogin.js';
 import AdLogi from './component/Login/AdLogin.js';
 import Form from './component/Reg/Reg.js';
-import OrderDrink from './component/Ordrink.js';
 import Dashboard from './component/Dashboard/Dashboard.js';
 import Login from './component/Login/Login.js';
 import Preferences from './component/Preferences/Preferences.js';
@@ -32,7 +31,6 @@ class App extends Component {
           <Route path="/drink" element={<Drink/>}/> 
           <Route path="/noodle" element={<Noodle/>}/>
           <Route path="/" element={<Home/>}/>
-          <Route path="/Ordrink" element={<OrderDrink/>}/>
           <Route path="/Reg" element={<Form/>}/>
           <Route path="/CusLogin" element={<CusLogi/>}/>
           <Route path="/AdLogin" element={<AdLogi/>}/>
