@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Card, CardGroup, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
 import './noodle.css';
-import { Link } from 'react-router-dom';
 
 
 const Noodle = () => {
@@ -21,7 +20,7 @@ const Noodle = () => {
             
         <div>
             <CardGroup style={{ margin: 5, padding: 5 }}>
-                <Link to="/Ornoodle">
+
                 <Card style={{ margin: 10, padding: 10,backgroundColor:"#ecdff3" }}>
                     <CardImg top width="100%" src="https://www.nespresso.com/ncp/resizer.php?width=1200&height=630&file=uploads%2Frecipes%2Fnespresso-recipes-Americano-by-Nespresso.jpg&token=3ea279dc5d5b0dd2e281af62f4267990" style={{ width: 450, height: 250 }} />
                     <CardBody>
@@ -29,7 +28,7 @@ const Noodle = () => {
                         <CardText>Although the Americano is created with espresso, don't expect it to taste exactly like one. Because of the fact that it is diluted with water, it loses some of the kick of espresso and instead tastes more like a richer, bolder cousin of the black coffee.</CardText>
                         <div ALIGN="RIGHT"><CardText>95 BATH</CardText></div>
                     </CardBody>
-                </Card></Link>
+                </Card>
 
                 <Card style={{ margin: 10, padding: 10,backgroundColor:"#bcf8cf" }}>
                     <CardImg top width="100%" src="https://gather8.com/wp-content/uploads/2019/09/Espresso1.jpg" style={{ width: 450, height: 250 }} />

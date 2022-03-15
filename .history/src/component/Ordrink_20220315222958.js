@@ -2,7 +2,6 @@ import React from "react";
 import { Card,CardImg,CardBody,CardTitle,CardText } from "reactstrap";
 import { Button,Badge} from '@mui/material';
 import {useState} from "react";
-import { Link } from "react-router-dom";
 
 const OrderDrink = () =>{
     const [Counter , setCount] = useState(0);
@@ -20,9 +19,9 @@ const OrderDrink = () =>{
         
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
                 
-                <Link to="/Drink"><Badge color="secondary" badgeContent=" X ">
+                <Badge color="secondary" badgeContent=" X ">
                     <CardImg top width="100%" src={(require("./..\\img\\baitei.png"))} style={{marginLeft:200, width: 450, height: 250 }} />
-                    </Badge></Link>
+                    </Badge>
                     <CardBody>
                     </CardBody>
                     
@@ -33,7 +32,7 @@ const OrderDrink = () =>{
                                 {if (Counter !== 0){
                                     setCount(Counter - 1)}
                                 }}>-</Button>
-                            <Button onClick={() => setCount(1 + Counter)} style={{alignSelf:"right"}}>+</Button>
+                            <Button onClick={() => setCount(1 + Counter)} style={{justifyContent:"right"}}><Right>+</Right></Button>
 
                             </CardBody>
                 </Card>
