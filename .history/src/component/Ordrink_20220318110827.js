@@ -1,14 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router";
 import { Card,CardImg,CardBody,CardTitle,CardText } from "reactstrap";
 import { Button,Badge} from '@mui/material';
 import {useState} from "react";
 import { Link } from "react-router-dom";
 
-
 const OrderDrink = () =>{
     const [Counter , setCount] = useState(0);
-    const navigate = useNavigate();
     return(
         <div>
             <style>
@@ -23,16 +20,16 @@ const OrderDrink = () =>{
         
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
                 
-                <Badge color="secondary" badgeContent=" X " onClick={() => {navigate('../Drink',{replace:true})}}>
-                    <CardImg top width="100%" src={(require("./..\\img\\baitei.png"))} style={{border:"2px solid black",marginLeft:200, width: 450, height: 250,marginTop:30 }} />
-                    </Badge>
+                <Link to="/Drink"><Badge color="secondary" badgeContent=" X ">
+                    <CardImg top width="100%" src={(require("./..\\img\\baitei.png"))} style={{marginLeft:200, width: 450, height: 250 }} />
+                    </Badge></Link>
                     <CardBody>
                     </CardBody>
                     
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
                     <CardBody><CardTitle><h4><center>น้ำใบเตย</center></h4></CardTitle>
-                           <div style={{width:"100%",display:"flex",justifyContent:"center"}}> <Button onClick={() => 
+                           <div style={{width:"100%"}}> <Button onClick={() => 
                                 {if (Counter !== 0){
                                     setCount(Counter - 1)}
                                 }}>-</Button>
@@ -41,10 +38,7 @@ const OrderDrink = () =>{
                             </CardBody>
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}>{Counter}</CardText></CardBody>
-                </Card>
-                <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}><Button variant="contained" color="inherit">OK</Button></CardText></CardBody>
+                    <CardBody><CardText>{Counter}</CardText></CardBody>
                 </Card>
         </div>
         </div>

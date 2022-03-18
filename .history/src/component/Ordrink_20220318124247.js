@@ -41,10 +41,7 @@ const OrderDrink = () =>{
                             </CardBody>
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}>{Counter}</CardText></CardBody>
-                </Card>
-                <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}><Button variant="contained" color="inherit">OK</Button></CardText></CardBody>
+                    <CardBody><CardText>{Counter}</CardText></CardBody>
                 </Card>
         </div>
         </div>

@@ -23,7 +23,7 @@ const OrderDrink = () =>{
         
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
                 
-                <Badge color="secondary" badgeContent=" X " onClick={() => {navigate('../Drink',{replace:true})}}>
+                <Badge color="secondary" badgeContent=" X " onClick={() => {navigate('./Drink',{replace:true})}}>
                     <CardImg top width="100%" src={(require("./..\\img\\baitei.png"))} style={{border:"2px solid black",marginLeft:200, width: 450, height: 250,marginTop:30 }} />
                     </Badge>
                     <CardBody>
@@ -41,10 +41,7 @@ const OrderDrink = () =>{
                             </CardBody>
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}>{Counter}</CardText></CardBody>
-                </Card>
-                <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}><Button variant="contained" color="inherit">OK</Button></CardText></CardBody>
+                    <CardBody><CardText>{Counter}</CardText></CardBody>
                 </Card>
         </div>
         </div>
