@@ -1,12 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router";
 import { Card,CardImg,CardBody,CardTitle,CardText } from "reactstrap";
 import { Button,Badge} from '@mui/material';
 import {useState} from "react";
-import { color } from "@mui/system";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 
-
-const OrderDrink = () =>{
+const OrderNoodle = () =>{
     const [Counter , setCount] = useState(0);
     const navigate = useNavigate();
     return(
@@ -16,14 +15,14 @@ const OrderDrink = () =>{
             </style>
             <div className="myStyleBev">
                 <br />
-            <h1>เครื่องดื่ม</h1>
+            <h1>ก๋วยเตี๋ยว</h1>
             </div>
             
         <div>
         
-                <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
+        <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
                 
-                <Badge style={{cursor:"pointer"}} color="secondary" badgeContent="X" onClick={() => {navigate('../Drink',{replace:true})}}>
+                <Badge color="secondary" badgeContent=" X " onClick={() => {navigate('../Drink',{replace:true})}}>
                     <CardImg top width="100%" src={(require("./..\\img\\baitei.png"))} style={{border:"2px solid black",marginLeft:200, width: 450, height: 250,marginTop:30 }} />
                     </Badge>
                     <CardBody>
@@ -46,8 +45,9 @@ const OrderDrink = () =>{
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
                     <CardBody><CardText style={{display:"flex",justifyContent:"center"}}><Button variant="contained" color="inherit">OK</Button></CardText></CardBody>
                 </Card>
+                
         </div>
         </div>
     );
 }
-export default OrderDrink;
+export default OrderNoodle;

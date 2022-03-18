@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Card, CardGroup, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
 import './noodle.css';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router';
 
 

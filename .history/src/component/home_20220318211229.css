@@ -47,3 +47,6 @@
   .font_line{
     font-family: 'Mitr',cursive;
   }
+  Badge:hover{
+    background-color: crimson;
+  }

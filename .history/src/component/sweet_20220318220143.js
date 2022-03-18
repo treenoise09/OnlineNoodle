@@ -22,13 +22,13 @@ const Sweet = () => {
         <div>
             <CardGroup style={{ margin: 5, padding: 5 }}>
                 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ecdff3" ,cursor:'pointer'}}onClick={() => {navigate('../Orsweet',{replace:true})}}>
-                <CardImg top width="100%" src="https://www.nespresso.com/ncp/resizer.php?width=1200&height=630&file=uploads%2Frecipes%2Fnespresso-recipes-Americano-by-Nespresso.jpg&token=3ea279dc5d5b0dd2e281af62f4267990" style={{ width: 450, height: 250 }} />
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ecdff3" ,cursor:'pointer'}}onClick={() => {navigate('../Ornoodle',{replace:true})}}>
+                <Link to="/Orsweet"><CardImg top width="100%" src="https://www.nespresso.com/ncp/resizer.php?width=1200&height=630&file=uploads%2Frecipes%2Fnespresso-recipes-Americano-by-Nespresso.jpg&token=3ea279dc5d5b0dd2e281af62f4267990" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Americano</h4></CardTitle>
                         <CardText>Although the Americano is created with espresso, don't expect it to taste exactly like one. Because of the fact that it is diluted with water, it loses some of the kick of espresso and instead tastes more like a richer, bolder cousin of the black coffee.</CardText>
                         <div ALIGN="RIGHT"><CardText>95 BATH</CardText></div>
-                    </CardBody>
+                    </CardBody></Link>
                 </Card>
 
                 <Card style={{ margin: 10, padding: 10,backgroundColor:"#bcf8cf" }}>

@@ -3,8 +3,10 @@ import React from 'react';
 import { Card, CardGroup, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
 import './noodle.css';
 import { Link } from 'react-router-dom';
-import { useNavigate } from "react-router";
-const Sweet = () => {
+import { useNavigate } from 'react-router';
+
+
+const Noodle = () => {
     const navigate = useNavigate();
     return (
         <div>
@@ -22,17 +24,16 @@ const Sweet = () => {
         <div>
             <CardGroup style={{ margin: 5, padding: 5 }}>
                 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ecdff3" ,cursor:'pointer'}}onClick={() => {navigate('../Orsweet',{replace:true})}}>
-                <CardImg top width="100%" src="https://www.nespresso.com/ncp/resizer.php?width=1200&height=630&file=uploads%2Frecipes%2Fnespresso-recipes-Americano-by-Nespresso.jpg&token=3ea279dc5d5b0dd2e281af62f4267990" style={{ width: 450, height: 250 }} />
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff",cursor:'pointer' }} onClick={() => {navigate('../Ornoodle',{replace:true})}}>
+               <CardImg top width="100%" src={require("../img/lek.jpg")} style={{ width: 450, height: 250 }} />
                     <CardBody>
-                        <CardTitle><h4>Americano</h4></CardTitle>
-                        <CardText>Although the Americano is created with espresso, don't expect it to taste exactly like one. Because of the fact that it is diluted with water, it loses some of the kick of espresso and instead tastes more like a richer, bolder cousin of the black coffee.</CardText>
+                        <CardTitle><h4>เส้นเล็ก</h4></CardTitle>
                         <div ALIGN="RIGHT"><CardText>95 BATH</CardText></div>
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#bcf8cf" }}>
-                    <CardImg top width="100%" src="https://gather8.com/wp-content/uploads/2019/09/Espresso1.jpg" style={{ width: 450, height: 250 }} />
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff" }}>
+                    <CardImg top width="100%" src={require("../img/mii.jpg")} style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Espresso</h4></CardTitle>
                         <CardText>Espresso should be bitter, but not too bitter (high levels of bitterness are more characteristic of espresso long shots). It should be rich, but not too rich. It should NOT be sour.</CardText>
@@ -40,8 +41,8 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffe8bf" }}>
-                    <CardImg top width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Cappuccino_at_Sightglass_Coffee.jpg/640px-Cappuccino_at_Sightglass_Coffee.jpg" style={{ width: 450, height: 250 }} />
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff" }}>
+                    <CardImg top width="100%" src={require("../img/meelueng.jpg")} style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Cappuccino</h4></CardTitle>
                         <CardText>A well-made cappuccino has incredible flavor and texture. It has a bold coffee taste and some sweetness from the naturally occurring lactose sugar in milk. It may also be flavored with sugar, with flavored simple syrups, and other additives. </CardText>
@@ -53,8 +54,8 @@ const Sweet = () => {
 
             <CardGroup style={{ margin: 5, padding: 5 }}>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#fcdee2"}}>
-                    <CardImg top width="100%" src="https://cdn1.medicalnewstoday.com/content/images/articles/289/289891/coffee.jpg" style={{ width: 450, height: 250 }} />
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff"}}>
+                    <CardImg top width="100%" src={require('../img/miiyok.png')} style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Mocha</h4></CardTitle>
                         <CardText>The flavor Mocha is basically a chocolate taste mixed with a coffee taste. It is not to be confused with the Mocha Coffee Bean which comes from Yemen, named after the place it came from (Mocha, Yemen).</CardText>
@@ -62,7 +63,7 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#e0f8e8"}}>
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff"}}>
                     <CardImg top width="100%" src="https://image.dek-d.com/27/0482/6589/128944451" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Latte</h4></CardTitle>
@@ -71,7 +72,7 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#fff9c7"}}>
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff"}}>
                     <CardImg top width="100%" src="https://www.parisperfect.com/blog/wp-content/uploads/2017/11/Fotolia-Credit-NorGal.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Hot Chocolate</h4></CardTitle>
@@ -83,7 +84,7 @@ const Sweet = () => {
 
             <CardGroup style={{ margin: 5, padding: 5 }}>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ecdff3" }}>
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff" }}>
                     <CardImg top width="100%" src="https://pixfeeds.com/images/drinks/tea/1280-463541757-iced-tea-and-lemon.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Lemon Tea</h4></CardTitle>
@@ -92,7 +93,7 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#bcf8cf" }}>
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff" }}>
                     <CardImg top width="100%" src="https://theitravelchannel.tv/wp-content/uploads/2017/07/Thai-Iced-Tea.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Thai Tea</h4></CardTitle>
@@ -101,7 +102,7 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10, backgroundColor:"#ffe8bf"}}>
+                <Card style={{ margin: 10, padding: 10, backgroundColor:"#ffffff"}}>
                     <CardImg top width="100%" src="https://whatsupdockth.com/wp-content/uploads/2019/08/ice-green-tea.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Green Tea</h4></CardTitle>
@@ -113,7 +114,7 @@ const Sweet = () => {
 
             <CardGroup style={{ margin: 5, padding: 5 }}>
 
-                <Card style={{ margin: 10, padding: 10, backgroundColor:"#fcdee2" }}>
+                <Card style={{ margin: 10, padding: 10, backgroundColor:"#ffffff" }}>
                     <CardImg top width="100%" src="https://www.rd.com/wp-content/uploads/2017/10/04_Yogurt_Foods-High-In-Zinc-to-Beat-Cold-and-Flu-Viruses_691319338_Oksana-Mizina-1024x683.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Strawberry Smoothies</h4></CardTitle>
@@ -122,7 +123,7 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10, backgroundColor:"#e0f8e8"}}>
+                <Card style={{ margin: 10, padding: 10, backgroundColor:"#ffffff"}}>
                     <CardImg top width="100%" src="https://steemitimages.com/DQmbNtAtA39ZzXdUNd2xwKigFdU19d4BTEor5p6BLgrn2do/DSC_0788.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Mixberry Smoothies</h4></CardTitle>
@@ -131,7 +132,7 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10 ,backgroundColor:"#fff9c7"}}>
+                <Card style={{ margin: 10, padding: 10 ,backgroundColor:"#ffffff"}}>
                     <CardImg top width="100%" src="https://i.ndtvimg.com/i/2016-04/fruit-smoothie-625_625x350_51460546648.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Kiwi Smoothies</h4></CardTitle>
@@ -143,7 +144,7 @@ const Sweet = () => {
 
             <CardGroup style={{ margin: 5, padding: 5 }}>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ecdff3" }}>
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff" }}>
                     <CardImg top width="100%" src="https://www.thetaylor-house.com/wp-content/uploads/2016/03/Strawberry-Italian-Soda-11-1024x682.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Strawberry Soda</h4></CardTitle>
@@ -152,7 +153,7 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#bcf8cf" }}>
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff" }}>
                     <CardImg top width="100%" src="https://www.loveandoliveoil.com/wp-content/uploads/2016/07/blueberry-syrupH-1200x550.jpg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Blueberry Soda</h4></CardTitle>
@@ -161,7 +162,7 @@ const Sweet = () => {
                     </CardBody>
                 </Card>
 
-                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffe8bf" }}>
+                <Card style={{ margin: 10, padding: 10,backgroundColor:"#ffffff" }}>
                     <CardImg top width="100%" src="https://lh6.googleusercontent.com/proxy/bNmptG7xHiiJg1ASsR9_i2basL-BcpFl75igj6IPx7uITXKX45cLs_qusKhYU_ALXfECyFWwy7-1jI-JvpmYtXHU2T_ulxcSwDldrcjWvKmOEbUZWg" style={{ width: 450, height: 250 }} />
                     <CardBody>
                         <CardTitle><h4>Kiwi Soda</h4></CardTitle>
@@ -177,4 +178,4 @@ const Sweet = () => {
     );
 }
 
-export default Sweet;
+export default Noodle;
