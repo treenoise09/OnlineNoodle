@@ -17,22 +17,21 @@ const Logi= () =>{
                     id="outlined-required"
                     label="Required"
                     defaultValue="Hello World"
-            /></div>
+            />
+            </div>
             <div ALIGN="center"><TextField
                 id="outlined-password-input"
                 label="Password"
                 type="password"
                 autoComplete="current-password"
-            /></div>
+            />
+            </div>
             <Link to={'/Reg'}><div ALIGN="center"><Button className='btn'>Register</Button></div></Link>
                   <Link to="/CusLogin"><div ALIGN="center"><Button variant="outline">For Customer</Button></div></Link>
                     <Link to="/Admin"><div ALIGN="center"><Button variant="outline">For Admin</Button></div></Link>
         </CardBody>
     </Card>
 </CardGroup>
-    
-  
-
     </div>
     );
 }
