@@ -23,7 +23,7 @@ const OrderNoodle = () =>{
         <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
                 
                 <Badge style={{cursor:"pointer"}}  color="secondary" badgeContent=" X " onClick={() => {navigate('../noodle',{replace:true})}}>
-                    <CardImg top width="100%" src={(require("./..\\img\\lek.jpg"))} style={{border:"2px solid black",marginLeft:200, width: 450, height: 250,marginTop:30 }} />
+                    <CardImg top width="100%" src={(require("./..\\img\\lek.jpg"))} style={{border:"2px solid black", width: 450, height: 250,marginTop:30 }} />
                     </Badge>
                     <CardBody>
                     </CardBody>
@@ -43,7 +43,7 @@ const OrderNoodle = () =>{
                     <CardBody><CardText style={{display:"flex",justifyContent:"center"}}>{Counter}</CardText></CardBody>
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}><Button variant="contained" color="inherit">OK</Button></CardText></CardBody>
+                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}><Button variant="contained" color="inherit" onClick={() => {navigate('../noodle',{replace:true})}}>Back</Button><Button variant="contained" color="inherit">OK</Button></CardText></CardBody>
                 </Card>
                 
         </div>
