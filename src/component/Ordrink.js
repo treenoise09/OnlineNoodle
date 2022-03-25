@@ -1,14 +1,17 @@
-import React from "react";
+import React,{Component,useContext} from 'react';
 import { useNavigate } from "react-router";
 import { Card,CardImg,CardBody,CardTitle,CardText } from "reactstrap";
 import { Button,Badge} from '@mui/material';
 import {useState} from "react";
 import { color } from "@mui/system";
-
-
+import { AuthContext } from './context';
+import Menu from './Menu/menuobj'
+import { Addchart } from '@mui/icons-material';
 const OrderDrink = () =>{
     const [Counter , setCount] = useState(0);
-    const navigate = useNavigate();
+    const navigate = useNavigate();           
+    const { Menus,addMenu,Cart,addCart} = useContext(AuthContext)
+    
     return(
         <div>
             <style>
@@ -18,7 +21,6 @@ const OrderDrink = () =>{
                 <br />
             <h1>เครื่องดื่ม</h1>
             </div>
-            
         <div>
         
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
@@ -44,10 +46,17 @@ const OrderDrink = () =>{
                     <CardBody><CardText style={{display:"flex",justifyContent:"center"}}>{Counter}</CardText></CardBody>
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}><Button variant="contained" color="inherit" onClick={() => {navigate('../Drink',{replace:true})}}>Back</Button><Button variant="contained" color="inherit">OK</Button></CardText></CardBody>
+                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}>
+                    <Button variant="contained" color="inherit" onClick={() => {navigate('../Drink',{replace:true})}}>Back</Button>
+                    <Button variant="contained" color="inherit" onClick={() => {
+                        addCart(new Menu("น้ำใบเตย","./..\\img\\baitei.png",25,"drinks"))
+                        let menu={menu:new Menu("น้ำใบเตย","./..\\img\\baitei.png",25,"drinks"),Counter:Counter}
+                        addCart(menu)
+                    }}>OK</Button></CardText></CardBody>
                 </Card>
         </div>
         </div>
     );
 }
 export default OrderDrink;
+

@@ -1,7 +1,8 @@
-import React,{Component} from 'react';
+import React,{Component,useContext} from 'react';
 import'./home.css';
 import { Card, CardGroup, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import {AuthContext} from './context';
 const Home = () =>{
     return (
     <div style={{backgroundColor:'transparent'}}>

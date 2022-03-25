@@ -1,12 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import { Card, CardGroup, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
+import { AuthContext } from './context';
+import React,{useContext} from 'react';
+import { CardGroup } from 'reactstrap';
+import { Card,CardActions,CardContent,CardMedia,Typography } from '@mui/material';
 import './noodle.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router";
 
 const Drink = () => {
     const navigate = useNavigate();
+    const {Menus} = useContext(AuthContext);
     return (
         <div>
             <style>
@@ -18,60 +21,19 @@ const Drink = () => {
             </div>
             
         <div>
-            <CardGroup style={{ margin: 5, padding: 5 }}>
+            <CardGroup style={{ margin: 5, padding: 5}}>
 
-                <Card style={{ margin: 10,backgroundColor:"#ecdff3",cursor:'pointer' }}onClick={() => {navigate('../Ordrink',{replace:true})}}>
+                {Menus.map((value)=>{console.log(value)
+                    return (<Card style={{ padding:10,margin: 10,backgroundColor:"#ecdff3",cursor:'pointer' }}onClick={() => {navigate('../Ordrink',{replace:true})}}>
                    
-                    <CardImg top width="100%" src={(require("./..\\img\\baitei.png"))} style={{  width: 450, height: 250 }} />
-                    <CardBody>
-                        <CardTitle><h4>น้ำใบเตย</h4></CardTitle>
-                        <div ALIGN="RIGHT"><CardText>95 BATH</CardText></div>
-                    </CardBody>
-                   
-                </Card>
-
-                <Card style={{ margin: 10,backgroundColor:"#bcf8cf" }}>
-                    <CardImg top width="100%" src={(require("./..\\img\\kajeab.png"))} style={{ width: 450, height: 250 }} />
-                    <CardBody>
-                        <CardTitle><h4>น้ำกระเจี๊ยบ</h4></CardTitle>
-                        <div ALIGN="RIGHT"><CardText>95 BATH</CardText></div>
-                    </CardBody>
-                </Card>
-
-                <Card style={{ margin: 10,backgroundColor:"#ffe8bf" }}>
-                    <CardImg top width="100%" src={(require("./..\\img\\gekhuy.png"))} style={{ width: 450, height: 250 }} />
-                    <CardBody>
-                        <CardTitle><h4>น้ำเก๊กฮวย</h4></CardTitle>
-                        <div ALIGN="RIGHT"><CardText>100 BATH</CardText></div>
-                    </CardBody>
-                </Card>
-
-            </CardGroup>
-
-            <CardGroup style={{ margin: 5, padding: 5 }}>
-
-                <Card style={{ margin: 10,backgroundColor:"#fcdee2"}}>
-                    <CardImg top width="100%" src={(require("./..\\img\\cha.png"))} style={{ width: 450, height: 250 }} />
-                    <CardBody>
-                        <CardTitle><h4>ชา</h4></CardTitle>
-                        <div ALIGN="RIGHT"><CardText>110 BATH</CardText></div>
-                    </CardBody>
-                </Card>
-
-                <Card style={{ margin: 10,backgroundColor:"#e0f8e8"}}>
-                    <CardImg top width="100%" src={(require("./..\\img\\lumyai.png"))} style={{ width: 450, height: 250 }} />
-                    <CardBody>
-                        <CardTitle><h4>นำ้ลำไย</h4></CardTitle>
-                        <div ALIGN="RIGHT"><CardText>110 BATH</CardText></div>
-                    </CardBody>
-                </Card>
-                <Card style={{ margin: 10,backgroundColor:"#e0f8e8"}}>
-                    <CardImg top width="100%" src={(require("./..\\img\\unchan.png"))} style={{ width: 450, height: 250 }} />
-                    <CardBody>
-                        <CardTitle><h4>นำ้อัญชัน</h4></CardTitle>
-                        <div ALIGN="RIGHT"><CardText>110 BATH</CardText></div>
-                    </CardBody>
-                </Card>
+                   <CardMedia component={"img"} src={require('../img/baitei.png')} height = "250" style={{width:"450px"}}/>
+                   <CardContent>
+                       <Typography variant="h1" component="div">{value.name}</Typography>
+                       <div ALIGN="RIGHT"><Typography>{value.price} BATH</Typography></div>
+                   </CardContent>
+                  
+               </Card>)})
+                }
             </CardGroup>
             </div>
         </div>
