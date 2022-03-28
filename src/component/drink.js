@@ -1,15 +1,25 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthContext } from './context';
-import React,{useContext} from 'react';
+import React,{useEffect,useContext, useState} from 'react';
 import { CardGroup } from 'reactstrap';
+import './drink.css';
 import { Card,CardActions,CardContent,CardMedia,Typography } from '@mui/material';
-import './noodle.css';
-import { Link } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import { useNavigate } from "react-router";
-
+import { Category } from '@mui/icons-material';
 const Drink = () => {
-    const navigate = useNavigate();
+    let {type} = useParams();
     const {Menus} = useContext(AuthContext);
+
+    const [FilterMenu,setFilter] = useState([])
+    useEffect(()=>{
+        let filter = Menus.filter(menu=>menu.category==type)
+        setFilter(filter)
+        }
+    ,[])
+
+    const navigate = useNavigate();
+    
     return (
         <div>
             <style>
@@ -17,14 +27,16 @@ const Drink = () => {
             </style>
             <div className="myStyleBev">
                 <br />
-            <h1>เครื่องดื่ม</h1>
+            <h1>{type}</h1>
+            
             </div>
             
         <div>
             <CardGroup style={{ margin: 5, padding: 5}}>
 
-                {Menus.map((value)=>{console.log(value)
-                    return (<Card style={{ padding:10,margin: 10,backgroundColor:"#ecdff3",cursor:'pointer' }}onClick={() => {navigate('../Ordrink',{replace:true})}}>
+                {FilterMenu.map((value)=>{console.log(value)
+                    return (
+                    <Card style={{ padding:10,margin: 10,backgroundColor:"#ecdff3",cursor:'pointer' }}onClick={() => {navigate('../Ordrink',{replace:true})}}>
                    
                    <CardMedia component={"img"} src={require('../img/baitei.png')} height = "250" style={{width:"450px"}}/>
                    <CardContent>
@@ -33,6 +45,7 @@ const Drink = () => {
                    </CardContent>
                   
                </Card>)})
+               
                 }
             </CardGroup>
             </div>

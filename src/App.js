@@ -1,8 +1,6 @@
 import React, { Component,useEffect,useMemo ,useState} from 'react';
 import Home from './component/home.js'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import Noodle from './component/noodle.js'
-import Sweet from './component/sweet.js';
 import Drink from './component/drink.js';
 import DataTable from './Admin.js';
 import Logi from './component/Li.js';
@@ -35,14 +33,17 @@ const AuthContextProvider = ({ children }) => {
       setCart(list)
     }
   const [Menus,setMenu] = useState([
-    new Menu("drink0","../img/baitei.png",25,"drinks"),
-    new Menu("drink-1","../img/baitei.png",25,"drinks"),
-    new Menu("drink-2","../img/baitei.png",25,"drinks"),
-    new Menu("drink-3","../img/baitei.png",25,"drinks"),
-    new Menu("noodle-1","../img/baitei.png",25,"noodle"),
-    new Menu("noodle-2","../img/baitei.png",25,"noodle"),
-    new Menu("noodle-3","../img/baitei.png",25,"noodle"),
-    new Menu("noodle-4","../img/baitei.png",25,"noodle"),
+    new Menu("น้ำใบเตย","../img/baitei.png",15,"drinks"),
+    new Menu("น้ำกระเจี๊ยบ","../img/baitei.png",15,"drinks"),
+    new Menu("น้ำเก๊กฮวย","../img/baitei.png",15,"drinks"),
+    new Menu("น้ำชา","../img/baitei.png",20,"drinks"),
+    new Menu("น้ำโค๊ก","../img/baitei.png",20,"drinks"),
+    new Menu("น้ำเปล่า","../img/baitei.png",10,"drinks"),
+    new Menu("เส้นเล็ก","../img/baitei.png",40,"noodle"),
+    new Menu("เส้นหมี่","../img/baitei.png",40,"noodle"),
+    new Menu("เส้นหมี่หยก","../img/baitei.png",40,"noodle"),
+    new Menu("เส้นบะหมี่","../img/baitei.png",40,"noodle"),
+    new Menu("เส้นก๋วยจั๊บ","../img/baitei.png",40,"noodle"),
     new Menu("sweet-1","../img/baitei.png",25,"sweet"),
     new Menu("sweet-2","../img/baitei.png",25,"sweet"),
     new Menu("sweet-3","../img/baitei.png",25,"sweet"),
@@ -75,9 +76,7 @@ function App() {
           <div className='background'>
           <Router>
                   <Routes>
-                    <Route path="/sweet" element={<Sweet/>}/>
-                    <Route path="/drink" element={<Drink/>}/> 
-                    <Route path="/noodle" element={<Noodle/>}/>
+                    <Route path="/drink/:type" element={<Drink/>}/>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/Cart" element={<Cart/>}/>
                     <Route path="/Ordrink" element={<OrderDrink/>}/>
