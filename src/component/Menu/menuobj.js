@@ -1,9 +1,13 @@
 class Menu {
-    constructor(name,picture,price,category){
+    constructor(id,name,picture,price,category){
+        this.id = id
         this.name = name
         this.picture = picture
         this.price = price
         this.category = category
+    }
+    get getId(){
+        return this.id
     }
     get getPrice(){
         return this.price

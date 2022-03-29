@@ -6,7 +6,7 @@ import './drink.css';
 import { Card,CardActions,CardContent,CardMedia,Typography } from '@mui/material';
 import { useParams} from 'react-router-dom';
 import { useNavigate } from "react-router";
-import { Category } from '@mui/icons-material';
+import { Category, Details } from '@mui/icons-material';
 const Drink = () => {
     let {type} = useParams();
     const {Menus} = useContext(AuthContext);
@@ -36,7 +36,7 @@ const Drink = () => {
 
                 {FilterMenu.map((value)=>{console.log(value)
                     return (
-                    <Card style={{ padding:10,margin: 10,backgroundColor:"#ecdff3",cursor:'pointer' }}onClick={() => {navigate('../Ordrink',{replace:true})}}>
+                    <Card style={{ padding:10,margin: 10,backgroundColor:"#ecdff3",cursor:'pointer' }}onClick={() => {navigate('../Ordrink/'+value.id,{replace:true})}}>
                    
                    <CardMedia component={"img"} src={require('../img/baitei.png')} height = "250" style={{width:"450px"}}/>
                    <CardContent>

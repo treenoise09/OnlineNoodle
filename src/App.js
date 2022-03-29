@@ -1,7 +1,7 @@
 import React, { Component,useEffect,useMemo ,useState} from 'react';
 import Home from './component/home.js'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import Drink from './component/drink.js';
+import Drink from './component/Menu.js';
 import DataTable from './Admin.js';
 import Logi from './component/Li.js';
 import CusLogi from './component/Login/CusLogin.js';
@@ -33,21 +33,21 @@ const AuthContextProvider = ({ children }) => {
       setCart(list)
     }
   const [Menus,setMenu] = useState([
-    new Menu("น้ำใบเตย","../img/baitei.png",15,"drinks"),
-    new Menu("น้ำกระเจี๊ยบ","../img/baitei.png",15,"drinks"),
-    new Menu("น้ำเก๊กฮวย","../img/baitei.png",15,"drinks"),
-    new Menu("น้ำชา","../img/baitei.png",20,"drinks"),
-    new Menu("น้ำโค๊ก","../img/baitei.png",20,"drinks"),
-    new Menu("น้ำเปล่า","../img/baitei.png",10,"drinks"),
-    new Menu("เส้นเล็ก","../img/baitei.png",40,"noodle"),
-    new Menu("เส้นหมี่","../img/baitei.png",40,"noodle"),
-    new Menu("เส้นหมี่หยก","../img/baitei.png",40,"noodle"),
-    new Menu("เส้นบะหมี่","../img/baitei.png",40,"noodle"),
-    new Menu("เส้นก๋วยจั๊บ","../img/baitei.png",40,"noodle"),
-    new Menu("sweet-1","../img/baitei.png",25,"sweet"),
-    new Menu("sweet-2","../img/baitei.png",25,"sweet"),
-    new Menu("sweet-3","../img/baitei.png",25,"sweet"),
-    new Menu("sweet-4","../img/baitei.png",25,"sweet"),
+    new Menu("D1","น้ำใบเตย","../img/baitei.png",15,"drinks"),
+    new Menu("D2","น้ำกระเจี๊ยบ","../img/baitei.png",15,"drinks"),
+    new Menu("D3","น้ำเก๊กฮวย","../img/baitei.png",15,"drinks"),
+    new Menu("D4","น้ำชา","../img/baitei.png",20,"drinks"),
+    new Menu("D5","น้ำโค๊ก","../img/baitei.png",20,"drinks"),
+    new Menu("D6","น้ำเปล่า","../img/baitei.png",10,"drinks"),
+    new Menu("N1","ส้นเล็ก","../img/baitei.png",40,"noodle"),
+    new Menu("N2","เส้นหมี่","../img/baitei.png",40,"noodle"),
+    new Menu("N3","เส้นหมี่หยก","../img/baitei.png",40,"noodle"),
+    new Menu("N4","เส้นบะหมี่","../img/baitei.png",40,"noodle"),
+    new Menu("N5","เส้นก๋วยจั๊บ","../img/baitei.png",40,"noodle"),
+    new Menu("S1","sweet-1","../img/baitei.png",25,"sweet"),
+    new Menu("S2","sweet-2","../img/baitei.png",25,"sweet"),
+    new Menu("S3","sweet-3","../img/baitei.png",25,"sweet"),
+    new Menu("S4","sweet-4","../img/baitei.png",25,"sweet"),
 ])
    const addMenu = (menu) => {
      let list = Menus
@@ -76,10 +76,10 @@ function App() {
           <div className='background'>
           <Router>
                   <Routes>
-                    <Route path="/drink/:type" element={<Drink/>}/>
+                    <Route path="/Menu/:type" element={<Drink/>}/>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/Cart" element={<Cart/>}/>
-                    <Route path="/Ordrink" element={<OrderDrink/>}/>
+                    <Route path="/Ordrink/:sort" element={<OrderDrink/>}/>
                     <Route path="/Orsweet" element={<OrderSweet/>}/>
                     <Route path="/Ornoodle" element={<OrderNoodle/>}/>
                     <Route path="/Reg" element={<Form/>}/>
