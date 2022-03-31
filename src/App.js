@@ -8,14 +8,13 @@ import CusLogi from './component/Login/CusLogin.js';
 import AdLogi from './component/Login/AdLogin.js';
 import Form from './component/Reg/Reg.js';
 import OrderDrink from './component/Ordrink.js';
-import OrderNoodle from './component/Ornoodle.js';
-import OrderSweet from './component/Orsweet.js';
 import Cart from './component/Cart.js';
 import Dashboard from './component/Dashboard/Dashboard.js';
 import Login from './component/Login/Login.js';
 import Preferences from './component/Preferences/Preferences.js';
 import Navbar from './component/Navbar';
 import { AuthContext } from './component/context';
+import OrderNoodle from './component/Ordernoodle.js';
 import {
   BrowserRouter as Router,
   Routes,
@@ -39,7 +38,7 @@ const AuthContextProvider = ({ children }) => {
     new Menu("D4","น้ำชา","../img/baitei.png",20,"drinks"),
     new Menu("D5","น้ำโค๊ก","../img/baitei.png",20,"drinks"),
     new Menu("D6","น้ำเปล่า","../img/baitei.png",10,"drinks"),
-    new Menu("N1","ส้นเล็ก","../img/baitei.png",40,"noodle"),
+    new Menu("N1","เส้นเล็ก","../img/baitei.png",40,"noodle"),
     new Menu("N2","เส้นหมี่","../img/baitei.png",40,"noodle"),
     new Menu("N3","เส้นหมี่หยก","../img/baitei.png",40,"noodle"),
     new Menu("N4","เส้นบะหมี่","../img/baitei.png",40,"noodle"),
@@ -78,10 +77,9 @@ function App() {
                   <Routes>
                     <Route path="/Menu/:type" element={<Drink/>}/>
                     <Route path="/" element={<Home/>}/>
+                    <Route path="/Ornoodle" element={<OrderNoodle/>}/>
                     <Route path="/Cart" element={<Cart/>}/>
                     <Route path="/Ordrink/:sort" element={<OrderDrink/>}/>
-                    <Route path="/Orsweet" element={<OrderSweet/>}/>
-                    <Route path="/Ornoodle" element={<OrderNoodle/>}/>
                     <Route path="/Reg" element={<Form/>}/>
                     <Route path="/CusLogin" element={<CusLogi/>}/>
                     <Route path="/AdLogin" element={<AdLogi/>}/>
