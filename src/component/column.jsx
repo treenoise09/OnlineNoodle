@@ -1,5 +1,5 @@
-import { render } from "@testing-library/react";
 import React from "react";
+import { Droppable } from "react-beautiful-dnd";
 import styled from "styled-components";
 import Task from "./task";
 const Container = styled.div`
@@ -10,18 +10,35 @@ border-radius: 2px;
 const Title = styled.h3`
 padding: 8px;
 `;
-const TaskList = styled.div`
-padding: 8px;
-`;
-
+class TaskList extends React.Component{
+    render(){
+        const { provided, innerRef, children } = this.props;
+        return (
+          <div style={{padding:"8px"}} {...provided.droppableProps} ref={innerRef}>
+            {children}
+          </div>)
+    }
+} 
 export default class Column extends React.Component{
     render(){
         return (
             <Container>
                 <Title>{this.props.column.title}</Title>
-                <TaskList>
-                    {this.props.tasks.map(task => <Task key={task.id} task={task}/>)}
+                <Droppable droppableId={this.props.column.id} type="TASK">
+                {(provided,snapshot) => (
+                <TaskList
+                    provided={provided}
+                    innerRef={provided.innerRef}
+                    {...provided.droppableProps}
+                    isDragginOver={snapshot.isDraggingOver}
+                >
+                    {this.props.tasks.map((task,index) => (
+                        <Task key={task.id} task={task} index={index}/>
+                    ))}
+                    {provided.placeholder}
                 </TaskList>
+                )}
+                </Droppable>
             </Container>
             );
         }
