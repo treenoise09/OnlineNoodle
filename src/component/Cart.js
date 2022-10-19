@@ -12,6 +12,9 @@ const Cart = () =>{
         <h1>รถเข็น</h1>
         </div>
         <div style={{backgroundColor:'#ffffff'}}><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+          <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch modal
+          </button>
         <CardGroup style={{ margin: 5, padding: 5 }}>
         <Card style={{ margin: 60, padding: 10,backgroundColor:"#2FA4FF" }}>
             <Link to="/noodle" style={{display:'flex',justifyContent:'centers',flexDirection:'column'}}>

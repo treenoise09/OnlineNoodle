@@ -1,5 +1,7 @@
 .background {
   background-image: url('../src/img/pexels.jpg');
+  width: '100vw';
+  height: '100vh';
   background-color: transparent;
   background-repeat: no-repeat;
   background-attachment: fixed;  

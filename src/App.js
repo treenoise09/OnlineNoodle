@@ -13,14 +13,11 @@ import OrderDrink from './component/Ordrink.js';
 import OrderNoodle from './component/Ornoodle.js';
 import OrderSweet from './component/Orsweet.js';
 import Cart from './component/Cart.js';
-import Dashboard from './component/Dashboard/Dashboard.js';
-import Login from './component/Login/Login.js';
-import Preferences from './component/Preferences/Preferences.js';
+
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import './App.css';
 class App extends Component {
