@@ -27,6 +27,7 @@ const Menu = () => {
                         <Nav.Link href="/Noodle">Noodle</Nav.Link>
                         <Nav.Link href="/Drink">Drink</Nav.Link>
                         <Nav.Link href="/Sweet">Sweet</Nav.Link>
+                        <Nav.Link href="/Cart">Cart</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
