@@ -1,14 +1,22 @@
-import React from "react";
+import React,{Component,useContext,useEffect} from 'react';
 import { useNavigate } from "react-router";
-import { Card,CardImg,CardBody,CardTitle,CardText } from "reactstrap";
+import { Card,CardActions,CardContent,CardMedia,Typography } from '@mui/material';
 import { Button,Badge} from '@mui/material';
 import {useState} from "react";
-import { color } from "@mui/system";
+import { AuthContext } from './context';
+import { useParams } from 'react-router-dom';
 
 
 const OrderDrink = () =>{
+    const { Menus,addCart} = useContext(AuthContext)
+    let {sort} = useParams();
+    const [detail,setdetail] = useState([])
+    useEffect(()=>{let descript = Menus.filter(detil=>detil.id==sort)
+    setdetail(descript[0])},[])
+
     const [Counter , setCount] = useState(0);
-    const navigate = useNavigate();
+    const navigate = useNavigate();           
+
     return(
         <div>
             <style>
@@ -18,36 +26,40 @@ const OrderDrink = () =>{
                 <br />
             <h1>เครื่องดื่ม</h1>
             </div>
-            
         <div>
-        
-                <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
+                    <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
                 
-                <Badge style={{cursor:"pointer"}} color="secondary" badgeContent="X" onClick={() => {navigate('../Drink',{replace:true})}}>
-                    <CardImg top width="100%" src={(require("./..\\img\\baitei.png"))} style={{border:"2px solid black",marginLeft:200, width: 450, height: 250,marginTop:30 }} />
-                    </Badge>
-                    <CardBody>
-                    </CardBody>
+                    <CardMedia component="img" src={(require("./..\\img\\baitei.png"))} style={{border:"2px solid black",marginTop:30 }} />
+      
+                    <CardContent>
+                    </CardContent>
                     
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardTitle><h4><center>น้ำใบเตย</center></h4></CardTitle>
+                    <CardContent><Typography><h4><center>{detail.name}</center></h4></Typography>
                            <div style={{width:"100%",display:"flex",justifyContent:"center"}}> <Button onClick={() => 
                                 {if (Counter !== 0){
                                     setCount(Counter - 1)}
                                 }}>-</Button>
                             <Button onClick={() => setCount(1 + Counter)} style={{alignSelf:"right"}}>+</Button>
                             </div>
-                            </CardBody>
+                            </CardContent>
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}>{Counter}</CardText></CardBody>
+                    <CardContent><Typography style={{display:"flex",justifyContent:"center"}}>{Counter}</Typography></CardContent>
                 </Card>
                 <Card style={{ marginLeft:500,marginRight:500,backgroundColor:"#ecdff3" }}>
-                    <CardBody><CardText style={{display:"flex",justifyContent:"center"}}><Button variant="contained" color="inherit">OK</Button></CardText></CardBody>
+                    <CardContent><Typography style={{display:"flex",justifyContent:"center"}}>
+                    <Button variant="contained" color="inherit" onClick={() => {navigate('../Menu/Drink',{replace:true})}}>Back</Button>
+                    <Button variant="contained" color="inherit" onClick={() => {
+                        let menu={menu:detail,Counter:Counter}
+                        addCart(menu)
+                    }}>OK</Button></Typography></CardContent>
                 </Card>
+                )
         </div>
         </div>
     );
 }
 export default OrderDrink;
+

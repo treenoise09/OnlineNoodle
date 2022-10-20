@@ -67,40 +67,34 @@ export default function Form() {
     );
   };
  
-  return (<div><Card style={{ backgroundColor:"#ecdff3" }}>
-         <CardBody>
-         <div className="form">
-      <div className='label'>
-        <center><h1>User Registration</h1></center>
-      </div>
- 
-      {/* Calling to the methods */}
-      <div className="messages">
-        {errorMessage()}
-        {successMessage()}
-      </div>
- 
-      <form>
-        {/* Labels and inputs for form data */}
-        <center><label className="label">Name</label>
-        <input onChange={handleName} className="input"
-          value={name} type="text" />
- 
-        <label className="label">Email</label>
-        <input onChange={handleEmail} className="input"
-          value={email} type="email" />
- 
-        <label className="label">Password</label>
-        <input onChange={handlePassword} className="input"
-          value={password} type="password" />
- 
- </center><button onClick={handleSubmit} className="btn" type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
-         </CardBody>
-</Card></div>
-  
+  return (
+  <div>
+    <Card style={{ backgroundColor:"#ecdff3" }}>
+      <CardBody>
+        <div className="form">
+          <div className='label'>
+            <center><h1>User Registration</h1></center>
+          </div>
+          {/* Calling to the methods */}
+          <div className="messages">
+            {errorMessage()}
+            {successMessage()}
+          </div>
+    
+          <form>
+            {/* Labels and inputs for form data */}
+            <center><label className="label">Name</label>
+              <input onChange={handleName} className="input" value={name} type="text" />
+              <label className="label">Email</label>
+              <input onChange={handleEmail} className="input" value={email} type="email" />
+              <label className="label">Password</label>
+              <input onChange={handlePassword} className="input" value={password} type="password" />
+            </center>
+            <button onClick={handleSubmit} className="btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </CardBody>
+    </Card>
+  </div>
   );
 }

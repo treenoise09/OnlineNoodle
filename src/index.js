@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './component/Navbar';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import App from './App';
+
 const Onlinenoodle = () => (
 <React.StrictMode>
-  <Navbar/>
-    <App />
+
+    <App/>
   </React.StrictMode>
 )
 ReactDOM.render(<Onlinenoodle /> ,document.getElementById('root'));
